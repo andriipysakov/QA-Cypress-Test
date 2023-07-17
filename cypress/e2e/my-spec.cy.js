@@ -1,6 +1,6 @@
 /// <reference types = "Cypress" />
 
-import {name_selector, phone_selector, email_selector, column_names_selector, button_edit, button_update, button_delete} from '../support/consts.js';
+import {name_selector, phone_selector, email_selector, column_names_selector, button_edit, button_update, button_delete, name_selector_edit, name_selector_edited} from '../support/consts.js';
 
 describe('Test Contact App', () => {
 
@@ -50,27 +50,14 @@ describe('Test Contact App', () => {
     cy.get(button_delete).first().click()
     cy.get(button_delete).last().click()
     cy.get(button_delete).should('not.exist')
+    cy.get(name_selector_edit).clear().type('HelloWorld')
+    cy.get(name_selector_edit).invoke('val').should('eq','HelloWorld')
     cy.get(button_update).click()
+    cy.get(name_selector_edited).should('contain.text','HelloWorld')
     cy.get(button_edit).should('be.not.null')
     cy.get(button_edit).should('be.visible')
     cy.get(button_delete).should('be.not.null')
     cy.get(button_delete).should('be.visible')
 
   })
-
-  // it('Test button edit, delete, update on the contact app page', () => {
-  //   cy.populateDataFieldsPositiveTests()
-  //   cy.get(button_edit).should('be.not.null')
-  //   cy.get(button_edit).should('be.visible')
-  //   cy.get(button_delete).should('be.not.null')
-  //   cy.get(button_delete).should('be.visible')
-  //   cy.get(button_edit).first().click()
-  //   cy.get(button_update).should('be.visible')
-  //   cy.get(button_update).should('be.not.null')
-  //   cy.get(button_delete).click()
-  //   cy.get(button_delete).click()
-  //   cy.get(column_names_selector).should('contain.text', 'John Doe')
-  //   cy.get(button_update).click()
-
-  // })
 });
