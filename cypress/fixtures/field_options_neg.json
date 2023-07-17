@@ -1,0 +1,12 @@
+{"data_fields_negative":[
+    {
+        "name": "John !^&%&",
+        "phone": ")*&^)",
+        "email": "*^%$(@magail.com"
+    },
+    {
+        "name": " ",
+        "phone": " ",
+        "email": " "
+    }
+]}

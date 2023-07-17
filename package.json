@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "cypress": "^12.17.1"
+  },
+  "name": "qa-cypress-test",
+  "description": "1. Extract .zip file\r 2. Open the project folder in an IDE of your choice\r 3. Open the terminal inside that project folder and run command `npm install`\r 4. Make sure you see the `node_modules` folder and `package-lock.json` file in your directory.\r 5. Run `npx cypress open` to open cypress runner",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

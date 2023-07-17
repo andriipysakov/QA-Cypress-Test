@@ -1,0 +1,8 @@
+export const name_selector = '[placeholder="Name"]'
+export const phone_selector = '[placeholder="Phone"]'
+export const email_selector = '[placeholder="Email"]'
+export const button_add_selector = '[name="add"]'
+export const column_names_selector = 'table tbody tr'
+export const button_edit = '[name="edit"]'
+export const button_update = '[name="update"]'
+export const button_delete = '[name="delete"]'
